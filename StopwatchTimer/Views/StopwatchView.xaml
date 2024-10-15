@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StopwatchTimer"
         mc:Ignorable="d"
-        Height="550" Width="400">
+        HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <UserControl.DataContext>
         <local:StopwatchViewModel />
     </UserControl.DataContext>

@@ -29,8 +29,8 @@
         </Grid.RowDefinitions>
 
         <!-- Main Frame for Page Navigation -->
-        <Frame x:Name="MainFrame" Grid.Row="0" Content="{Binding CurrentView}" />
-        
+        <ContentControl Grid.Row="0" Content="{Binding CurrentView}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
         <!-- Navigation Buttons -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -39,7 +39,6 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Content="Stopwatch" Command="{Binding ShowStopwatchCommand}"/>
             <Button Grid.Column="1" Content="Timer" Command="{Binding ShowTimerCommand}"/>
-
         </Grid>
         
     </Grid>
