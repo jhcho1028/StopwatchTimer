@@ -9,6 +9,20 @@ namespace StopwatchTimer
 {
     public class TimerViewModel: INotifyPropertyChanged
     {
+        private int _timerValue;
+        public int TimerValue
+        {
+            get => _timerValue;
+            set
+            {
+                if (_timerValue != value)
+                {
+                    _timerValue = value;
+                    OnPropertyChanged(nameof(TimerValue));
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {

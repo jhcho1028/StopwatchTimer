@@ -10,7 +10,15 @@ namespace StopwatchTimer
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private object _currentView;
+        public StopwatchView StopwatchView = new StopwatchView();
+        public TimerView TimerView = new TimerView();
+
+        public StopwatchViewModel StopwatchViewModel { get; }
+        public TimerViewModel TimerViewModel { get; }
+
+        public ICommand ShowStopwatchCommand { get; }
+        public ICommand ShowTimerCommand { get; }
+
 
         public MainViewModel()
         {
@@ -28,6 +36,10 @@ namespace StopwatchTimer
             ShowTimerCommand = new RelayCommand(SwitchToTimer);
         }
 
+        private void SwitchToStopwatch() => CurrentView = StopwatchView;
+        private void SwitchToTimer() => CurrentView = TimerView;
+
+        private object _currentView;
         public object CurrentView
         {
             get => _currentView;
@@ -38,17 +50,16 @@ namespace StopwatchTimer
             }
         }
 
-        public StopwatchView StopwatchView = new StopwatchView();
-        public TimerView TimerView = new TimerView();
-
-        public StopwatchViewModel StopwatchViewModel { get; }
-        public TimerViewModel TimerViewModel { get; }
-
-        public ICommand ShowStopwatchCommand { get; }
-        public ICommand ShowTimerCommand { get; }
-
-        private void SwitchToStopwatch() => CurrentView = StopwatchView;
-        private void SwitchToTimer() => CurrentView = TimerView;
+        private int _numericValue;
+        public int NumericValue
+        {
+            get => _numericValue;
+            set
+            {
+                _numericValue = value;
+                OnPropertyChanged(nameof(NumericValue));
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)

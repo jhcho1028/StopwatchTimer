@@ -29,10 +29,10 @@
         </Grid.RowDefinitions>
 
         <!-- Main Frame for Page Navigation -->
-        <ContentControl Grid.Row="0" Content="{Binding CurrentView}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <ContentControl Grid.Row="0" Content="{Binding CurrentView}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"/>
 
         <!-- Navigation Buttons -->
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Margin="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
