@@ -60,7 +60,7 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StopwatchViewModel.cs" />
     <Compile Include="ViewModels\TimerViewModel.cs" />
-    <Compile Include="Views\NumericUpDown.xaml.cs">
+    <Compile Include="Resources\NumericUpDown.xaml.cs">
       <DependentUpon>NumericUpDown.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StopwatchView.xaml.cs">
@@ -69,7 +69,7 @@
     <Compile Include="Views\TimerView.xaml.cs">
       <DependentUpon>TimerView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Resources\Styles.xaml">
+    <Page Include="Resources\NumericUpDownStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -85,7 +85,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\NumericUpDown.xaml">
+    <Page Include="Resources\NumericUpDown.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -4,5 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StopwatchTimer">
-    <local:NumericUpDownControl Value="{Binding NumericValue}" Minimum="0" Maximum="100" />
+    <local:NumericUpDownControl Value="{Binding NumericValue}" Minimum="0" Maximum="60" />
+
 </UserControl>

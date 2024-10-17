@@ -15,10 +15,18 @@
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="0.5*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <local:NumericUpDown HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <local:NumericUpDown Grid.Column="0"/>
+            <local:NumericUpDown Grid.Column="1"/>
+            <local:NumericUpDown Grid.Column="2"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -40,5 +48,9 @@
             </ListBox>
         </Grid>
 
+        <Grid Grid.Row="3">
+            <Button Style="{StaticResource ResourceKey=xNumericColor}">아무거나</Button>
+        </Grid>
+        
     </Grid>
 </UserControl>
