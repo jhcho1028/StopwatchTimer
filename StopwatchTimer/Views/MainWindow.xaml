@@ -11,26 +11,33 @@
     </Window.DataContext>
 
     <Window.Resources>
-         <!--StopwatchViewModel에 대한 View 정의--> 
-        <DataTemplate DataType="{x:Type local:StopwatchViewModel}">
-            <local:StopwatchView />
-        </DataTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/NumericUpDownStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
 
-         <!--TimerViewModel에 대한 View 정의--> 
-        <DataTemplate DataType="{x:Type local:TimerViewModel}">
-            <local:TimerView />
-        </DataTemplate>
+            <!--StopwatchViewModel에 대한 View 정의-->
+            <DataTemplate DataType="{x:Type local:StopwatchViewModel}">
+                <local:StopwatchView />
+            </DataTemplate>
+
+            <!--TimerViewModel에 대한 View 정의-->
+            <DataTemplate DataType="{x:Type local:TimerViewModel}">
+                <local:TimerView />
+            </DataTemplate>
+        </ResourceDictionary>
     </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
         <!-- Main Frame for Page Navigation -->
         <ContentControl Grid.Row="0" Content="{Binding CurrentView}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"/>
-
+        
         <!-- Navigation Buttons -->
         <Grid Grid.Row="1" Margin="5">
             <Grid.ColumnDefinitions>
@@ -40,6 +47,8 @@
             <Button Grid.Column="0" Content="Stopwatch" Command="{Binding ShowStopwatchCommand}"/>
             <Button Grid.Column="1" Content="Timer" Command="{Binding ShowTimerCommand}"/>
         </Grid>
-        
+
+        <Button Grid.Row="2" Content="Stopwatch" Command="{Binding ShowStopwatchCommand}"/>
+
     </Grid>
 </Window>

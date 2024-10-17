@@ -49,5 +49,9 @@
             </ListBox>
         </Grid>
 
+        <Grid Grid.Row="3">
+            <Button Style="{StaticResource ResourceKey=xNumericColor}">아무거나</Button>
+        </Grid>
+        
     </Grid>
 </UserControl>
