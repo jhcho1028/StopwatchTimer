@@ -32,7 +32,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
         <!-- Main Frame for Page Navigation -->
@@ -47,8 +46,6 @@
             <Button Grid.Column="0" Content="Stopwatch" Command="{Binding ShowStopwatchCommand}"/>
             <Button Grid.Column="1" Content="Timer" Command="{Binding ShowTimerCommand}"/>
         </Grid>
-
-        <Button Grid.Row="2" Content="Stopwatch" Command="{Binding ShowStopwatchCommand}"/>
 
     </Grid>
 </Window>

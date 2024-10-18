@@ -43,5 +43,11 @@ namespace StopwatchTimer
             IncreaseCommand = new RelayCommand(_ =>Value++);
             DecreaseCommand = new RelayCommand(_ => Value--);
         }
+
+        public double Value
+        {
+            get { return (double)GetValue(ValueProperty); }
+            set { SetValue(ValueProperty, value); }
+        }
     }
 }
