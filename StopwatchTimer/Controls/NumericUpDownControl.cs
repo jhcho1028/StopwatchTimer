@@ -9,7 +9,7 @@ namespace StopwatchTimer
     {
         public static readonly DependencyProperty ValueProperty =
             DependencyProperty.Register("Value", typeof(int), typeof(NumericUpDownControl),
-                new PropertyMetadata(0));
+                new PropertyMetadata(0, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         public int Value
         {
@@ -40,14 +40,9 @@ namespace StopwatchTimer
 
         public NumericUpDownControl()
         {
-            IncreaseCommand = new RelayCommand(_ =>Value++);
+            IncreaseCommand = new RelayCommand(_ => Value++);
             DecreaseCommand = new RelayCommand(_ => Value--);
         }
 
-        public double Value
-        {
-            get { return (double)GetValue(ValueProperty); }
-            set { SetValue(ValueProperty, value); }
-        }
     }
 }

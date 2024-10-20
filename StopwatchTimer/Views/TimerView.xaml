@@ -27,7 +27,7 @@
 
         <!-- 시간 설정 입력 필드 -->
         <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <local:NumericUpDown Margin="1" Value="{Binding InputTime}"/>
+            <local:NumericUpDown Margin="1" Value="{Binding InputHour Mode=TwoWay}"/>
         </Grid>
         <Grid Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2">
             <local:NumericUpDown Margin="1"/>
